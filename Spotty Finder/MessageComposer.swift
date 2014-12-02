@@ -22,7 +22,7 @@ class MessageComposer: NSObject, MFMessageComposeViewControllerDelegate {
     func configuredMessageComposeViewController(messageBody setMessageBody: String? = nil) -> MFMessageComposeViewController {
         let messageComposeVC = MFMessageComposeViewController()
         messageComposeVC.messageComposeDelegate = self
-        //messageComposeVC.recipients = [""]
+        //messageComposeVC.recipients = [""] in case for pre set user
         if let messageBody = setMessageBody {
             messageComposeVC.body = messageBody
         } else {
