@@ -69,6 +69,14 @@ class NamedPlaceAnnotationView: MKAnnotationView {
         
         if (selected) {
             bubbleView = createCalloutView()
+            
+            /*
+[calloutView setFrame:CGRectMake(-24, 35, 0, 0)];
+[calloutView sizeToFit];
+
+[self animateCalloutAppearance];
+[self addSubview:calloutView];
+*/
             addSubview(bubbleView)
         } else {
             bubbleView.removeFromSuperview()
@@ -133,5 +141,28 @@ class NamedPlaceAnnotationView: MKAnnotationView {
     @IBAction func rightCalloutAction(button: UIButton) {
         println("rightCalloutAction")
     }
+    
+    /*
+    
+- (void)animateCalloutAppearance {
+CGFloat scale = 0.001f;
+calloutView.transform = CGAffineTransformMake(scale, 0.0f, 0.0f, scale, 0, -50);
+
+[UIView animateWithDuration:0.15 delay:0 options:UIViewAnimationCurveEaseOut animations:^{
+CGFloat scale = 1.1f;
+calloutView.transform = CGAffineTransformMake(scale, 0.0f, 0.0f, scale, 0, 2);
+} completion:^(BOOL finished) {
+[UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationCurveEaseInOut animations:^{
+CGFloat scale = 0.95;
+calloutView.transform = CGAffineTransformMake(scale, 0.0f, 0.0f, scale, 0, -2);
+} completion:^(BOOL finished) {
+[UIView animateWithDuration:0.075 delay:0 options:UIViewAnimationCurveEaseInOut animations:^{
+CGFloat scale = 1.0;
+calloutView.transform = CGAffineTransformMake(scale, 0.0f, 0.0f, scale, 0, 0);
+} completion:nil];
+}];
+}];
+}*/
+
 
 }
