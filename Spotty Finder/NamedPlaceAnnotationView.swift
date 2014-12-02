@@ -1,0 +1,137 @@
+//
+//  NamedPlaceAnnotationView.swift
+//  Spotty Finder
+//
+//  Created by Тимур Татаршаов on 25.11.14.
+//  Copyright (c) 2014 Timur Tatarshaov. All rights reserved.
+//
+
+import MapKit
+
+
+class NamedPlaceAnnotationView: MKAnnotationView {
+    
+    var imageView: UIImageView = UIImageView()
+    var bubbleView: UIView = UIView()
+    //var reuseIdentifier: String! = "pin"
+    let frameForButton: CGRect = CGRect(x: 0.0, y: 0.0, width: 45.0, height: 45.0)
+    let frameForAnnotationView: CGRect = CGRect(x: 0.0, y: 0.0, width: 45.0, height: 45.0)
+    
+    override init(annotation: MKAnnotation, reuseIdentifier: String) {
+        
+        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
+        
+        self.draggable = true
+        let imageButton = UIButton(frame: frameForButton)
+        let image = (annotation as NamedPlace).image
+        imageButton.setBackgroundImage(image, forState:.Normal)
+        self.leftCalloutAccessoryView = imageButton
+        
+        
+        self.image = image
+        self.frame = frameForAnnotationView
+        //self.calloutOffset = CGPointMake(100.0, 100.0)
+        self.canShowCallout = true //annotation.isKindOfClass(NamedPlace)
+        self.enabled = true
+        self.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclosure) as UIButton
+
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        let iView: UIImageView = UIImageView(frame: frameForAnnotationView)
+        // keeps the image dimensions correct
+        // so if you have a rectangle image, it will show up as a rectangle,
+        // instead of being resized into a square
+        iView.contentMode = UIViewContentMode.ScaleAspectFit;
+        iView.layer.cornerRadius = 10.0
+        iView.clipsToBounds = true
+        
+        self.imageView = iView;
+        
+        self.addSubview(iView)
+    }
+    
+    func setImage(image: UIImage) {
+        self.imageView.image = image
+        (self.leftCalloutAccessoryView as UIButton).setBackgroundImage(image, forState: .Normal)
+        (annotation as NamedPlace).image = image
+    }
+    
+    override func setSelected(selected: Bool, #animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        return
+        
+        if (selected) {
+            bubbleView = createCalloutView()
+            addSubview(bubbleView)
+        } else {
+            bubbleView.removeFromSuperview()
+        }
+
+        println("\(selected)")
+    }
+    
+    override func didAddSubview(subview: UIView) {
+        if subview.description == "UICalloutView" {
+            subview.removeFromSuperview()
+        }
+    }
+    
+    func createCalloutView() -> UIView {
+        let view = UIView(frame: CGRect(x: -100.0, y: -50.0, width: 200.0, height: 45.0))
+        view.backgroundColor = UIColor.whiteColor()
+        let iView: UIImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 45.0, height: 45.0))
+        iView.image = (annotation as NamedPlace).image
+        view.addSubview(iView)
+        
+        let iTitleLabel = UILabel(frame: CGRect(x: 50.0, y: 0.0, width: 45.0, height: 45.0))
+        iTitleLabel.textColor = UIColor.darkTextColor()
+        iTitleLabel.text = (annotation as NamedPlace).title
+        iTitleLabel.adjustsFontSizeToFitWidth = true
+        view.addSubview(iTitleLabel)
+        
+        let iSubtitleLabel = UILabel(frame: CGRect(x: 50.0, y: 20.0, width: 45.0, height: 45.0))
+        iSubtitleLabel.text = (annotation as NamedPlace).title
+        iSubtitleLabel.textColor = UIColor.darkTextColor()
+        iSubtitleLabel.adjustsFontSizeToFitWidth = true
+        //view.addSubview(iSubtitleLabel)
+        
+        let txtField: UITextField = UITextField()
+        txtField.frame = CGRectMake(50, 70, 200, 30)
+        txtField.backgroundColor = UIColor.grayColor()
+        txtField.text = (annotation as NamedPlace).title
+        //view.addSubview(txtField)
+        
+        let imageButton = UIButton(frame: frameForButton)
+        let image = (annotation as NamedPlace).image
+        imageButton.setBackgroundImage(image, forState:.Normal)
+        imageButton.addTarget(self, action: "leftCalloutAction:", forControlEvents: .TouchUpInside)
+        view.addSubview(imageButton)
+        
+        let disclosureButton = UIButton.buttonWithType(.DetailDisclosure) as UIButton
+        disclosureButton.frame = CGRect(x: 150.0, y: 0.0, width: 35.0, height: 35.0)
+        //disclosureButton.setBackgroundImage(image, forState:.Normal)
+        disclosureButton.addTarget(self, action: "rightCalloutAction:", forControlEvents: .TouchDown)
+        //disclosureButton.setType(.DetailDisclosure)
+        view.addSubview(disclosureButton)
+        
+        
+        
+        return view
+    }
+    
+    @IBAction func leftCalloutAction(button: UIButton) {
+        println("leftCalloutAction")
+    }
+    
+    @IBAction func rightCalloutAction(button: UIButton) {
+        println("rightCalloutAction")
+    }
+
+}
