@@ -27,7 +27,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     let messageComposer = MessageComposer()
     let programmaticallyCreatedUI = ProgrammaticallyCreatedUI()
-    let placeImageNames = ["house.png", "car.png", "house.png"] // "fishing.png", "car.png"]
+    let placeImageNames = ["house.png", "car.png", "default.png", "casper.png", "cycle.png", "fishing.png", "flower.png", "food.png", "glass.png", "golf.png", "heart.png", "horse.png", "mashroom.png", "money.png", "party.png", "pizza.png", "shopping_man.png", "shopping_w.png", "ski.png", "sports.png", "target.png", "violin.png"]
     var annotationViewSelected: MKAnnotationView?
     var openUrl: NSURL?
 
