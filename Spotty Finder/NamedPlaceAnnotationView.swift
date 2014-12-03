@@ -25,6 +25,8 @@ class NamedPlaceAnnotationView: MKAnnotationView {
         let imageButton = UIButton(frame: frameForButton)
         let image = (annotation as NamedPlace).image
         imageButton.setBackgroundImage(image, forState:.Normal)
+        imageButton.layer.cornerRadius = 10.0
+        imageButton.clipsToBounds = true
         self.leftCalloutAccessoryView = imageButton
         
         
@@ -77,7 +79,9 @@ class NamedPlaceAnnotationView: MKAnnotationView {
 [self animateCalloutAppearance];
 [self addSubview:calloutView];
 */
-            addSubview(bubbleView)
+            //self.superview!.addSubview(bubbleView)
+            self.addSubview(bubbleView)
+            self.userInteractionEnabled = true
         } else {
             bubbleView.removeFromSuperview()
         }
@@ -125,10 +129,10 @@ class NamedPlaceAnnotationView: MKAnnotationView {
         let disclosureButton = UIButton.buttonWithType(.DetailDisclosure) as UIButton
         disclosureButton.frame = CGRect(x: 150.0, y: 0.0, width: 35.0, height: 35.0)
         //disclosureButton.setBackgroundImage(image, forState:.Normal)
-        disclosureButton.addTarget(self, action: "rightCalloutAction:", forControlEvents: .TouchDown)
+        disclosureButton.addTarget(self, action: "rightCalloutAction:", forControlEvents: .TouchUpInside)
         //disclosureButton.setType(.DetailDisclosure)
         view.addSubview(disclosureButton)
-        
+        view.userInteractionEnabled = true
         
         
         return view
@@ -164,5 +168,32 @@ calloutView.transform = CGAffineTransformMake(scale, 0.0f, 0.0f, scale, 0, 0);
 }];
 }*/
 
+    /*
+from controller http://stackoverflow.com/questions/16252764/how-to-create-custom-mkannotationview-and-custom-annotation-title-and-subtitle
+[mapView deselectAnnotation:view.annotation animated:YES];
+
+DetailsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailsPopover"];
+controller.annotation = view.annotation; // it's useful to have property in your view controller for whatever data it needs to present the annotation's details
+
+self.popover = [[UIPopoverController alloc] initWithContentViewController:controller];
+self.popover.delegate = self;
+
+[self.popover presentPopoverFromRect:view.frame
+inView:view.superview
+permittedArrowDirections:UIPopoverArrowDirectionAny
+animated:YES];
+    
+*/
+    
+    /* from nib http://stackoverflow.com/questions/17772108/custom-mkannotation-callout-bubble-with-button
+    
+    - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    
+    CalloutView *calloutView = (CalloutView *)[[[NSBundle mainBundle] loadNibNamed:@"callOutView" owner:self options:nil] objectAtIndex:0];
+    
+    
+    }
+
+*/
 
 }

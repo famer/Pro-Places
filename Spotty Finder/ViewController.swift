@@ -29,6 +29,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let programmaticallyCreatedUI = ProgrammaticallyCreatedUI()
     let placeImageNames = ["house.png", "car.png", "house.png"] // "fishing.png", "car.png"]
     var annotationViewSelected: MKAnnotationView?
+    var openUrl: NSURL?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,15 +49,15 @@ class ViewController: UIViewController, MKMapViewDelegate {
         mapKitView.rotateEnabled = false
         //mapKitView.scrollEnabled = false
         
-        let place1 = NamedPlace(name: "Yay1", Lat: 50.088611, Lon: 14.421389)
+        let place1 = NamedPlace(name: "Yay1", latitude: 50.088611, longitude: 14.421389)
         //navigation.places.addPlace(place1)
         
         //navigation.print()
         
-        let place2 = NamedPlace(name: "Yay", Lat: 51.088611, Lon: 14.421389) //NamedPlace(name: "Some yay", Lat: 12.12, Lon: 43.11)
+        let place2 = NamedPlace(name: "Yay", latitude: 51.088611, longitude: 14.421389) //NamedPlace(name: "Some yay", Lat: 12.12, Lon: 43.11)
         //navigation.places.addPlace(place2)
         
-        let place3 = NamedPlace(name: "Yay3", Lat: 52.088611, Lon: 14.421389) //NamedPlace(name: "Some yay", Lat: 12.12, Lon: 43.11)
+        let place3 = NamedPlace(name: "Yay3", latitude: 52.088611, longitude: 14.421389) //NamedPlace(name: "Some yay", Lat: 12.12, Lon: 43.11)
         
         //place2.image = UIImage(named: "car.png")!
         //navigation.places.update([place2, place3])
@@ -66,8 +67,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
 
         
-        let place = NamedPlace(name: "Goal", Lat: 48.149111, Lon: 11.560991)
-        let berlin = NamedPlace(name: "Berlin", Lat: 52.518302, Lon: 13.418957)
+        let place = NamedPlace(name: "Goal", latitude: 48.149111, longitude: 11.560991)
+        let berlin = NamedPlace(name: "Berlin", latitude: 52.518302, longitude: 13.418957)
         navigation.places.update([place, berlin])
                 
         createButtons(placeImageNames)
@@ -140,7 +141,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             (navigation.places.stored[i] as NamedPlace).name = name
         } else {
             var pPlace = navigation.places.stored[i]
-            navigation.places.stored[i] = NamedPlace(name: name, Lat: pPlace.latitude, Lon: pPlace.longitude)
+            navigation.places.stored[i] = NamedPlace(name: name, latitude: pPlace.latitude, longitude: pPlace.longitude)
         }
         updateAnnotations()
     }
@@ -188,6 +189,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     func config() {
         UIApplication.sharedApplication().idleTimerDisabled = false
         UIApplication.sharedApplication().idleTimerDisabled = true
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"appDidBecomeActive:", name:UIApplicationDidBecomeActiveNotification, object:nil)
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -197,21 +199,40 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     
     @IBAction func sendTextMessageButtonTapped(sender: UIButton) {
-        // Make sure the device can send text messages
         if (messageComposer.canSendText()) {
-            // Obtain a configured MFMessageComposeViewController
-            let messageComposeVC = messageComposer.configuredMessageComposeViewController(messageBody: "yay")
             
-            // Present the configured MFMessageComposeViewController instance
-            // Note that the dismissal of the VC will be handled by the messageComposer instance,
-            // since it implements the appropriate delegate call-back
+            var place: NamedPlace
+            if let target = navigation.places.target {
+                place = target
+            } else {
+                place = NamedPlace(name: "Current place", location: navigation.currentLocation!)
+            }
+            enum SendMessage: Int {
+                case TextMessage
+            }
+            let message = place.sendMessage(type: SendMessage.TextMessage.rawValue)
+            let messageComposeVC = messageComposer.configuredMessageComposeViewController(messageBody: message)
             presentViewController(messageComposeVC, animated: true, completion: nil)
+
+            
         } else {
-            // Let the user know if his/her device isn't able to send text messages
             let errorAlert = UIAlertView(title: "Cannot Send Text Message", message: "Your device is not able to send text messages.", delegate: self, cancelButtonTitle: "OK")
             errorAlert.show()
         }
     }
+    func appDidBecomeActive(notification:  NSNotification) {
+    //override func viewWillAppear(animated: Bool) {
+        if let url = self.openUrl {
+            var components = url.pathComponents
+            let place = NamedPlace(name: "Receied place", latitude: components[1].doubleValue, longitude:components[2].doubleValue)
+            navigation.setTarget(place: place)
+            mapKitView.addAnnotation(navigation.places.target)
+            self.openUrl = nil
+            
+        }
+    }
+    
+    
     
     
 }

@@ -30,24 +30,35 @@ class PlaceActionSheetAppearance: NSObject, UIActionSheetDelegate {
         if sheet.tag == 1 {
             //println(buttonIndex)
             //println(sheet.buttonTitleAtIndex(buttonIndex))
-            if (buttonIndex == 2) {
-                self.uiView!.mapKitView.removeAnnotation(place)
-                //println(place!.idInArray!)
-                self.uiView!.navigation.places.deletePlace(place!.idInArray!)
-                self.uiView!.navigation.removeTarget()
-            }
-            if (buttonIndex == 3) {
+            switch buttonIndex {
+            case 1:
+                sendMessage()
+            case 2:
+                removePlace()
+            case 3:
                 
-                self.getPrompt({result in
-                    println(result!)
-                    //(self.place! as NamedPlace).annotationView().setSelected(false, animated:false)
+                getPrompt({result in
                     (self.place! as NamedPlace).name = result!
-                    //(self.place! as NamedPlace).annotationView().setSelected(true, animated:false)// = "asdf"
+                    self.place!.annotationView().setSelected(false, animated:false)
                     self.uiView!.navigation.places.saveState()
                 })
                 
+            default:
+                println("default")
             }
         }
+    }
+    
+    func sendMessage() {
+        let message = self.place!.sendMessage(type: 0)
+        let messageComposeVC = self.uiView!.messageComposer.configuredMessageComposeViewController(messageBody: message)
+        self.uiView!.presentViewController(messageComposeVC, animated: true, completion: nil)
+    }
+    
+    func removePlace() {
+        self.uiView!.mapKitView.removeAnnotation(place)
+        self.uiView!.navigation.places.deletePlace(place!.idInArray!)
+        self.uiView!.navigation.removeTarget()
     }
     
     func getPrompt(completionBlock: ((String?) -> ())) {

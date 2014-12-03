@@ -25,9 +25,9 @@ class NamedPlace: Place {
         return "\(location.asText)"
     }
     
-    init(name: String?, Lat: CLLocationDegrees, Lon: CLLocationDegrees) {
+    init(name: String?, latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         self.name = name
-        super.init(Lat: Lat, Lon: Lon)
+        super.init(latitude: latitude, longitude: longitude)
     }
     
     init(name: String? = nil, location: CLLocation) {

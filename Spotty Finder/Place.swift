@@ -32,6 +32,12 @@ class Place: NSObject, MKAnnotation {
         return location.date
     }
     
+    var sendMessageFormat: String {
+        let path: String = NSBundle.mainBundle().pathForResource("Info", ofType:"plist")!
+        let data = NSDictionary(contentsOfFile: path)!
+        return data.valueForKey("Send location message scheme") as String
+    }
+    
     var image: UIImage = UIImage(named: "house.png")!
 
     override init() {}
@@ -40,10 +46,10 @@ class Place: NSObject, MKAnnotation {
         self.location = Location(location: location)
     }
     
-    init(Lat: CLLocationDegrees, Lon: CLLocationDegrees) {
+    init(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         // FIXIT: make location and use previous init
-        self.location.latitude = Lat;
-        self.location.longitude = Lon;
+        self.location.latitude = latitude
+        self.location.longitude = longitude
     }
     
     func setCoordinate(newCoordinate: CLLocationCoordinate2D) {
@@ -62,6 +68,16 @@ class Place: NSObject, MKAnnotation {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd 'at' h:mm a"
         return dateFormatter.stringFromDate(date)
+    }
+    
+    func sendMessage(type type: Int) -> String {
+        switch type {
+        case 0:
+            return String(format: sendMessageFormat, latitude, longitude)
+        default:
+            return String(format: sendMessageFormat, latitude, longitude)
+        }
+        
     }
     
 }

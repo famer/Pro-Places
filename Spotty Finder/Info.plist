@@ -47,13 +47,25 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>Send location message scheme</key>
-	<string>fndr://open/%f/%f</string>
+	<string>I&apos;m here! fndr://OPEN/%f/%f</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>SPFN</string>
+				<string>fndr</string>
+				<string>spfnd</string>
+				<string>spottyfinder</string>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>
