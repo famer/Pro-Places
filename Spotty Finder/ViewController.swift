@@ -69,7 +69,7 @@ class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate 
         
         let place = NamedPlace(name: "Goal", latitude: 48.149111, longitude: 11.560991)
         let berlin = NamedPlace(name: "Berlin", latitude: 52.518302, longitude: 13.418957)
-        navigation.places.update([place, berlin])
+        //navigation.places.update([place, berlin])
                 
         createButtons(placeImageNames)
         
@@ -224,16 +224,23 @@ class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate 
     @IBAction func scanCode(sender: UIButton) {
         reader.modalPresentationStyle = .FormSheet
         reader.delegate               = self
-        
-        reader.completionBlock = { (result: String?) in
-            println(result)
-        }
+        presentViewController(reader, animated: true, completion: nil)
     }
     
     // MARK: - QRCodeReader Delegate Methods
     
     func reader(reader: QRCodeReader, didScanResult result: String) {
         self.dismissViewControllerAnimated(true, completion: nil)
+        let components = result.componentsSeparatedByString(" ")
+        println(components)
+        let latitude = (components[0] as NSString).doubleValue
+        let longitude = (components[1] as NSString).doubleValue
+        
+        let place = NamedPlace(name: "Scanned place", latitude: latitude, longitude: longitude)
+        navigation.setTarget(place: place)
+        mapKitView.addAnnotation(navigation.places.target)
+        
+        
     }
     
     func readerDidCancel(reader: QRCodeReader) {
@@ -245,7 +252,9 @@ class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate 
     //override func viewWillAppear(animated: Bool) {
         if let url = self.openUrl {
             var components = url.pathComponents
-            let place = NamedPlace(name: "Receied place", latitude: components[1].doubleValue, longitude:components[2].doubleValue)
+            let latitude = components[1].doubleValue
+            let longitude = components[2].doubleValue
+            let place = NamedPlace(name: "Receied place", latitude: latitude, longitude: longitude)
             navigation.setTarget(place: place)
             mapKitView.addAnnotation(navigation.places.target)
             self.openUrl = nil
@@ -257,4 +266,7 @@ class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate 
     
     
 }
+
+
+
 
