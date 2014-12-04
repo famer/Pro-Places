@@ -67,7 +67,7 @@ class NamedPlaceAnnotationView: MKAnnotationView {
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        println("\(selected)")
+        //println("\(selected)")
         /*
         
         if (selected) {

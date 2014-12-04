@@ -18,7 +18,7 @@ class MapViewManipulations {
     let pi2XGrad: Double = 360.0
     let metersPerMile = 1609.344
     let maxVisibleDistance = 141.0
-    let annotationWidth: Double = 38.0
+    let annotationWidth: Double = 45.0
     
     
     
@@ -88,6 +88,7 @@ class MapViewManipulations {
         } else {
             dummyMapView.camera.heading = navigation.locationSource.currentHeading - pi2XGrad
         }
+        // exception if location services unavailable
         dummyMapView.camera.centerCoordinate = navigation.currentLocation!.coordinate
 
         

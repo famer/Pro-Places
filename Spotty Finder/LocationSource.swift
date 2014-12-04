@@ -47,7 +47,7 @@ class LocationSource: NSObject, CLLocationManagerDelegate  {
         currentLatitude = manager.location.coordinate.latitude
         currentLongitude = manager.location.coordinate.longitude
         
-        //delegate?.locationUpdated(manager.location)
+        delegate?.locationUpdated(manager.location)
         
     }
     
