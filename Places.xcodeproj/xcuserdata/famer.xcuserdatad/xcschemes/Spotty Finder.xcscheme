@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "269BDCA019EE9C720004501F"
-               BuildableName = "Spotty Finder.app"
-               BlueprintName = "Spotty Finder"
-               ReferencedContainer = "container:Spotty Finder.xcodeproj">
+               BuildableName = "Places.app"
+               BlueprintName = "Places"
+               ReferencedContainer = "container:Places.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "269BDCB519EE9C720004501F"
-               BuildableName = "Spotty FinderTests.xctest"
-               BlueprintName = "Spotty FinderTests"
-               ReferencedContainer = "container:Spotty Finder.xcodeproj">
+               BuildableName = "PlacesTests.xctest"
+               BlueprintName = "PlacesTests"
+               ReferencedContainer = "container:Places.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "269BDCB519EE9C720004501F"
-               BuildableName = "Spotty FinderTests.xctest"
-               BlueprintName = "Spotty FinderTests"
-               ReferencedContainer = "container:Spotty Finder.xcodeproj">
+               BuildableName = "PlacesTests.xctest"
+               BlueprintName = "PlacesTests"
+               ReferencedContainer = "container:Places.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "269BDCA019EE9C720004501F"
-            BuildableName = "Spotty Finder.app"
-            BlueprintName = "Spotty Finder"
-            ReferencedContainer = "container:Spotty Finder.xcodeproj">
+            BuildableName = "Places.app"
+            BlueprintName = "Places"
+            ReferencedContainer = "container:Places.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "269BDCA019EE9C720004501F"
-            BuildableName = "Spotty Finder.app"
-            BlueprintName = "Spotty Finder"
-            ReferencedContainer = "container:Spotty Finder.xcodeproj">
+            BuildableName = "Places.app"
+            BlueprintName = "Places"
+            ReferencedContainer = "container:Places.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "269BDCA019EE9C720004501F"
-            BuildableName = "Spotty Finder.app"
-            BlueprintName = "Spotty Finder"
-            ReferencedContainer = "container:Spotty Finder.xcodeproj">
+            BuildableName = "Places.app"
+            BlueprintName = "Places"
+            ReferencedContainer = "container:Places.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -119,14 +119,14 @@
 		269233751A1C9A430033527B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		269233761A1C9A430033527B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		2692337D1A1C9DBE0033527B /* Spotty Finder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spotty Finder-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		269BDCA119EE9C720004501F /* Spotty Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotty Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		269BDCA119EE9C720004501F /* Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		269BDCA519EE9C720004501F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		269BDCA619EE9C720004501F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		269BDCA819EE9C720004501F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		269BDCAB19EE9C720004501F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		269BDCAD19EE9C720004501F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		269BDCB019EE9C720004501F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		269BDCB619EE9C720004501F /* Spotty FinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spotty FinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		269BDCB619EE9C720004501F /* PlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		269BDCBB19EE9C720004501F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		269BDCBC19EE9C720004501F /* Spotty_FinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotty_FinderTests.swift; sourceTree = "<group>"; };
 		269BDCC719EE9E130004501F /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -224,8 +224,8 @@
 		269BDCA219EE9C720004501F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				269BDCA119EE9C720004501F /* Spotty Finder.app */,
-				269BDCB619EE9C720004501F /* Spotty FinderTests.xctest */,
+				269BDCA119EE9C720004501F /* Places.app */,
+				269BDCB619EE9C720004501F /* PlacesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -339,9 +339,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		269BDCA019EE9C720004501F /* Spotty Finder */ = {
+		269BDCA019EE9C720004501F /* Places */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 269BDCC019EE9C720004501F /* Build configuration list for PBXNativeTarget "Spotty Finder" */;
+			buildConfigurationList = 269BDCC019EE9C720004501F /* Build configuration list for PBXNativeTarget "Places" */;
 			buildPhases = (
 				269BDC9D19EE9C720004501F /* Sources */,
 				269BDC9E19EE9C720004501F /* Frameworks */,
@@ -351,14 +351,14 @@
 			);
 			dependencies = (
 			);
-			name = "Spotty Finder";
+			name = Places;
 			productName = "Spotty Finder";
-			productReference = 269BDCA119EE9C720004501F /* Spotty Finder.app */;
+			productReference = 269BDCA119EE9C720004501F /* Places.app */;
 			productType = "com.apple.product-type.application";
 		};
-		269BDCB519EE9C720004501F /* Spotty FinderTests */ = {
+		269BDCB519EE9C720004501F /* PlacesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 269BDCC319EE9C720004501F /* Build configuration list for PBXNativeTarget "Spotty FinderTests" */;
+			buildConfigurationList = 269BDCC319EE9C720004501F /* Build configuration list for PBXNativeTarget "PlacesTests" */;
 			buildPhases = (
 				269BDCB219EE9C720004501F /* Sources */,
 				269BDCB319EE9C720004501F /* Frameworks */,
@@ -369,9 +369,9 @@
 			dependencies = (
 				269BDCB819EE9C720004501F /* PBXTargetDependency */,
 			);
-			name = "Spotty FinderTests";
+			name = PlacesTests;
 			productName = "Spotty FinderTests";
-			productReference = 269BDCB619EE9C720004501F /* Spotty FinderTests.xctest */;
+			productReference = 269BDCB619EE9C720004501F /* PlacesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -397,7 +397,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 269BDC9C19EE9C720004501F /* Build configuration list for PBXProject "Spotty Finder" */;
+			buildConfigurationList = 269BDC9C19EE9C720004501F /* Build configuration list for PBXProject "Places" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -410,8 +410,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				269BDCA019EE9C720004501F /* Spotty Finder */,
-				269BDCB519EE9C720004501F /* Spotty FinderTests */,
+				269BDCA019EE9C720004501F /* Places */,
+				269BDCB519EE9C720004501F /* PlacesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -511,7 +511,7 @@
 /* Begin PBXTargetDependency section */
 		269BDCB819EE9C720004501F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 269BDCA019EE9C720004501F /* Spotty Finder */;
+			target = 269BDCA019EE9C720004501F /* Places */;
 			targetProxy = 269BDCB719EE9C720004501F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -622,7 +622,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Spotty Finder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Places;
 				SWIFT_OBJC_BRIDGING_HEADER = "Spotty Finder-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -635,7 +635,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Spotty Finder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Places;
 				SWIFT_OBJC_BRIDGING_HEADER = "Spotty Finder-Bridging-Header.h";
 			};
 			name = Release;
@@ -654,8 +654,8 @@
 				);
 				INFOPLIST_FILE = "Spotty FinderTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spotty Finder.app/Spotty Finder";
+				PRODUCT_NAME = PlacesTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Places.app/Places";
 			};
 			name = Debug;
 		};
@@ -669,15 +669,15 @@
 				);
 				INFOPLIST_FILE = "Spotty FinderTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spotty Finder.app/Spotty Finder";
+				PRODUCT_NAME = PlacesTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Places.app/Places";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		269BDC9C19EE9C720004501F /* Build configuration list for PBXProject "Spotty Finder" */ = {
+		269BDC9C19EE9C720004501F /* Build configuration list for PBXProject "Places" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				269BDCBE19EE9C720004501F /* Debug */,
@@ -686,7 +686,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		269BDCC019EE9C720004501F /* Build configuration list for PBXNativeTarget "Spotty Finder" */ = {
+		269BDCC019EE9C720004501F /* Build configuration list for PBXNativeTarget "Places" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				269BDCC119EE9C720004501F /* Debug */,
@@ -695,7 +695,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		269BDCC319EE9C720004501F /* Build configuration list for PBXNativeTarget "Spotty FinderTests" */ = {
+		269BDCC319EE9C720004501F /* Build configuration list for PBXNativeTarget "PlacesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				269BDCC419EE9C720004501F /* Debug */,
