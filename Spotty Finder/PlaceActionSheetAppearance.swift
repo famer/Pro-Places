@@ -75,7 +75,10 @@ class PlaceActionSheetAppearance: NSObject, UIActionSheetDelegate {
             inputTextField = textField
         })
         
-        self.uiView!.presentViewController(alert, animated: true, completion: nil)
+        // Bug of ios to be fixed in async thread
+        dispatch_async(dispatch_get_main_queue()) {
+            self.uiView!.presentViewController(alert, animated: true, completion: nil)
+        }
         //self.uiView!.presentViewController(alert, animated: true, completion: nil)
     }
 }

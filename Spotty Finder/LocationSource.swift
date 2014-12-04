@@ -53,7 +53,10 @@ class LocationSource: NSObject, CLLocationManagerDelegate  {
     
     func locationManager(manager: CLLocationManager!, didUpdateHeading newHeading: CLHeading!) {
         currentHeading = newHeading.trueHeading
-        delegate?.locationUpdated(manager.location)
+        // ERROR falls out when location is updated but not available, or it's no delegate??
+        if delegate != nil && manager.location != nil {
+            delegate?.locationUpdated(manager.location)
+        }
     }
     
 }
