@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2628DC8E1A301D3500436559 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628DC8B1A301D3500436559 /* QRCodeReader.swift */; };
+		2628DC8F1A301D3500436559 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628DC8C1A301D3500436559 /* ReaderView.swift */; };
+		2628DC901A301D3500436559 /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628DC8D1A301D3500436559 /* SwitchCameraButton.swift */; };
 		26316F6119F864DB00135D51 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26316F6019F864DB00135D51 /* Location.swift */; };
 		2657922C1A1AB06400239D9E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657922B1A1AB06400239D9E /* TableViewController.swift */; };
 		268702191A2E919F00069539 /* bell.png in Resources */ = {isa = PBXBuildFile; fileRef = 268701FC1A2E919F00069539 /* bell.png */; };
@@ -77,6 +80,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2628DC8B1A301D3500436559 /* QRCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReader.swift; sourceTree = "<group>"; };
+		2628DC8C1A301D3500436559 /* ReaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
+		2628DC8D1A301D3500436559 /* SwitchCameraButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCameraButton.swift; sourceTree = "<group>"; };
 		26316F6019F864DB00135D51 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		2657922B1A1AB06400239D9E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		268701FC1A2E919F00069539 /* bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bell.png; path = Images/bell.png; sourceTree = "<group>"; };
@@ -162,6 +168,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2628DC8A1A301D3500436559 /* QRCodeReader */ = {
+			isa = PBXGroup;
+			children = (
+				2628DC8B1A301D3500436559 /* QRCodeReader.swift */,
+				2628DC8C1A301D3500436559 /* ReaderView.swift */,
+				2628DC8D1A301D3500436559 /* SwitchCameraButton.swift */,
+			);
+			path = QRCodeReader;
+			sourceTree = "<group>";
+		};
 		265792271A1AAE8B00239D9E /* UIClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +195,7 @@
 		269233731A1C9A210033527B /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				2628DC8A1A301D3500436559 /* QRCodeReader */,
 				269233741A1C9A430033527B /* SWRevealViewController */,
 			);
 			name = Libraries;
@@ -456,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26ADFECE19FF2B0B00B32B7F /* Network.swift in Sources */,
+				2628DC901A301D3500436559 /* SwitchCameraButton.swift in Sources */,
 				2657922C1A1AB06400239D9E /* TableViewController.swift in Sources */,
 				269BDCCE19F010DA0004501F /* PlacesSet.swift in Sources */,
 				26ADFECC19FD659400B32B7F /* MapKitViewAppearance.swift in Sources */,
@@ -465,8 +483,10 @@
 				269BDCCA19EF51E20004501F /* NamedPlace.swift in Sources */,
 				269BDCCC19EF58330004501F /* Navigation.swift in Sources */,
 				26EEA4581A2E423900815410 /* MessageComposer.swift in Sources */,
+				2628DC8E1A301D3500436559 /* QRCodeReader.swift in Sources */,
 				2692336D1A1C5A0A0033527B /* MapViewManipulations.swift in Sources */,
 				2692336F1A1C5A7A0033527B /* Map.swift in Sources */,
+				2628DC8F1A301D3500436559 /* ReaderView.swift in Sources */,
 				269233771A1C9A430033527B /* SWRevealViewController.m in Sources */,
 				26E11AB41A24D55500CEB77C /* ImageChooserButton.swift in Sources */,
 				26CCEE541A003CBC007FCDD2 /* PlaceActionSheetAppearance.swift in Sources */,

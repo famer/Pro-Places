@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate {
 
     @IBOutlet weak var removePlaceSpace: UIView!
     @IBOutlet weak var mapKitView: MKMapView!
@@ -22,8 +22,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     let navigation = Navigation.sharedInstance
     let mapKitViewAppearance = MapKitViewAppearance()
-    
     var mapViewManipulations = MapViewManipulations()
+    lazy var reader: QRCodeReader = QRCodeReader(cancelButtonTitle: "Cancel")
     
     let messageComposer = MessageComposer()
     let programmaticallyCreatedUI = ProgrammaticallyCreatedUI()
@@ -220,6 +220,27 @@ class ViewController: UIViewController, MKMapViewDelegate {
             errorAlert.show()
         }
     }
+    
+    @IBAction func scanCode(sender: UIButton) {
+        reader.modalPresentationStyle = .FormSheet
+        reader.delegate               = self
+        
+        reader.completionBlock = { (result: String?) in
+            println(result)
+        }
+    }
+    
+    // MARK: - QRCodeReader Delegate Methods
+    
+    func reader(reader: QRCodeReader, didScanResult result: String) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func readerDidCancel(reader: QRCodeReader) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     func appDidBecomeActive(notification:  NSNotification) {
     //override func viewWillAppear(animated: Bool) {
         if let url = self.openUrl {
