@@ -74,7 +74,7 @@ class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate 
         createButtons(placeImageNames)
         
         mapViewManipulations.addAnnotations()
-        self.view.addSubview(programmaticallyCreatedUI.overviewButton())
+        //self.view.addSubview(programmaticallyCreatedUI.overviewButton())
         
         self.showMenuButton.addTarget(self.revealViewController(), action: "revealToggle:", forControlEvents: .TouchUpInside)
         showSideBarMenuBarButton.target = self.revealViewController()
@@ -88,6 +88,16 @@ class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate 
         self.revealViewController().rearViewRevealOverdraw = 0.0
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
+    }
+    
+    @IBAction func overviewAction(button: UIButton) {
+        self.mapViewManipulations.overView = true
+        self.mapViewManipulations.updateMapUI()
+    }
+    
+    @IBAction func overviewActionCancel(button: UIButton) {
+        self.mapViewManipulations.overView = false
+        self.mapViewManipulations.updateMapUI()
     }
     
     
@@ -232,7 +242,6 @@ class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate 
     func reader(reader: QRCodeReader, didScanResult result: String) {
         self.dismissViewControllerAnimated(true, completion: nil)
         let components = result.componentsSeparatedByString(" ")
-        println(components)
         let latitude = (components[0] as NSString).doubleValue
         let longitude = (components[1] as NSString).doubleValue
         
