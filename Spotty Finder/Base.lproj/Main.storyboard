@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UrL-lU-ecZ">
-                                <rect key="frame" x="0.0" y="44" width="600" height="512"/>
+                                <rect key="frame" x="0.0" y="54" width="600" height="502"/>
                             </mapView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCB-rr-b1w">
                                 <rect key="frame" x="153" y="439" width="295" height="161"/>
@@ -87,7 +87,10 @@
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0q-BE-xy1">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="CEG-Zi-HO1"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="bookmarks" id="UNG-mC-oaM">
                                         <connections>
@@ -96,13 +99,6 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpH-QG-gpz" customClass="ImageSelectorScrollView" customModule="Spotty_Finder" customModuleProvider="target">
-                                <rect key="frame" x="16" y="385" width="568" height="61"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="DMP-fV-wkd"/>
-                                </constraints>
-                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQz-nd-3gk">
                                 <rect key="frame" x="563" y="519" width="22" height="22"/>
                                 <state key="normal">
@@ -113,6 +109,13 @@
                                     <action selector="overviewActionCancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y4b-I2-ob8"/>
                                 </connections>
                             </button>
+                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpH-QG-gpz" customClass="ImageSelectorScrollView" customModule="Spotty_Finder" customModuleProvider="target">
+                                <rect key="frame" x="16" y="385" width="568" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="DMP-fV-wkd"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -147,38 +150,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="157" y="258"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="L2X-zU-f9S">
-            <objects>
-                <viewController id="BpS-wI-g1x" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="m8m-un-a8B"/>
-                        <viewControllerLayoutGuide type="bottom" id="UAe-9O-QtY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HzJ-gB-gMz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXR-rh-hNr">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <connections>
-                                    <segue destination="MAh-Np-F33" kind="embed" id="yQ0-nO-hPU"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="oXR-rh-hNr" secondAttribute="trailing" id="EaW-Cf-MiI"/>
-                            <constraint firstItem="oXR-rh-hNr" firstAttribute="leading" secondItem="HzJ-gB-gMz" secondAttribute="leading" id="GSu-OE-dcy"/>
-                            <constraint firstItem="oXR-rh-hNr" firstAttribute="bottom" secondItem="UAe-9O-QtY" secondAttribute="top" id="VP4-zS-uZk"/>
-                            <constraint firstItem="oXR-rh-hNr" firstAttribute="top" secondItem="HzJ-gB-gMz" secondAttribute="top" id="XP7-Zl-hgs"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6cf-yt-cYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="848" y="-476"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="syY-kF-RII">
@@ -235,7 +206,4 @@
     <resources>
         <image name="house.png" width="135" height="126"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="yQ0-nO-hPU"/>
-    </inferredMetricsTieBreakers>
 </document>

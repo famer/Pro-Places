@@ -64,10 +64,11 @@ class NamedPlaceAnnotationView: MKAnnotationView {
         (annotation as NamedPlace).image = image
     }
     
-    override func setSelected(selected: Bool, #animated: Bool) {
+    override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        return
+        println("\(selected)")
+        /*
         
         if (selected) {
             bubbleView = createCalloutView()
@@ -86,7 +87,7 @@ class NamedPlaceAnnotationView: MKAnnotationView {
             bubbleView.removeFromSuperview()
         }
 
-        println("\(selected)")
+*/
     }
     
     override func didAddSubview(subview: UIView) {

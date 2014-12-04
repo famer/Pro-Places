@@ -70,7 +70,7 @@ class Place: NSObject, MKAnnotation {
         return dateFormatter.stringFromDate(date)
     }
     
-    func sendMessage(type type: Int) -> String {
+    func sendMessage(#type: Int) -> String {
         switch type {
         case 0:
             return String(format: sendMessageFormat, latitude, longitude)

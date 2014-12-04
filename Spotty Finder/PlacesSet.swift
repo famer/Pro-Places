@@ -87,7 +87,7 @@ class PlacesSet: NSObject, NSCoding {
     }
     
     required init(coder aDecoder: NSCoder) {
-        self.target = aDecoder.decodeObjectForKey("target") as NamedPlace
+        self.target = aDecoder.decodeObjectForKey("target") as? NamedPlace
         self.stored = aDecoder.decodeObjectForKey("stored") as [Place]
         self.deleted = aDecoder.decodeObjectForKey("deleted") as [Place]
     }

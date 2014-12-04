@@ -87,6 +87,9 @@ class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate 
         self.revealViewController().rearViewRevealOverdraw = 0.0
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
+        //mapKitView.layer.borderColor = UIColor.redColor().CGColor;
+        //mapKitView.layer.borderWidth = 3.0;
+        
     }
     
     @IBAction func overviewAction(button: UIButton) {

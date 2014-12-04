@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication sourceApplication: NSString, annotation annotation: AnyObject) -> Bool {
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: NSString, annotation: AnyObject) -> Bool {
         
         var mainController = (self.window!.rootViewController! as SWRevealViewController).frontViewController as ViewController;
         mainController.openUrl = url;
