@@ -14,7 +14,6 @@ class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate 
 
     @IBOutlet weak var removePlaceSpace: UIView!
     @IBOutlet weak var mapKitView: MKMapView!
-    @IBOutlet weak var showMenuButton: UIButton!
     @IBOutlet weak var showSideBarMenuBarButton: UIBarButtonItem!
     @IBOutlet weak var placeImageSelectorView: ImageSelectorScrollView!
     @IBOutlet weak var sendBarButton: UIBarButtonItem!
@@ -76,7 +75,7 @@ class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate 
         mapViewManipulations.addAnnotations()
         //self.view.addSubview(programmaticallyCreatedUI.overviewButton())
         
-        self.showMenuButton.addTarget(self.revealViewController(), action: "revealToggle:", forControlEvents: .TouchUpInside)
+        //self.showMenuButton.addTarget(self.revealViewController(), action: "revealToggle:", forControlEvents: .TouchUpInside)
         showSideBarMenuBarButton.target = self.revealViewController()
         showSideBarMenuBarButton.action = "revealToggle:"
         
