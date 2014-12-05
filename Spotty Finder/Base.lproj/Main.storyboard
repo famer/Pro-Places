@@ -30,7 +30,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Spotty_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -109,7 +109,7 @@
                                     <action selector="overviewActionCancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y4b-I2-ob8"/>
                                 </connections>
                             </button>
-                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpH-QG-gpz" customClass="ImageSelectorScrollView" customModule="Spotty_Finder" customModuleProvider="target">
+                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpH-QG-gpz" customClass="ImageSelectorScrollView" customModule="Places" customModuleProvider="target">
                                 <rect key="frame" x="16" y="385" width="568" height="61"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -154,7 +154,7 @@
         <!--Table View Controller-->
         <scene sceneID="syY-kF-RII">
             <objects>
-                <tableViewController id="MAh-Np-F33" customClass="TableViewController" customModule="Spotty_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="MAh-Np-F33" customClass="TableViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NUy-qp-BUx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
