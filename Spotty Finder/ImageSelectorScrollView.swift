@@ -25,6 +25,7 @@ class ImageSelectorScrollView: UIScrollView {
         
         UIColor.blackColor().setStroke()
         roundedRect.stroke()
+        
     }
     
     func addItem(item: UIView) {
@@ -32,5 +33,7 @@ class ImageSelectorScrollView: UIScrollView {
         currentX += spaceWidth + itemWidth
         item.frame = frame
         self.addSubview(item)
+        
+        //self.contentSize = CGSize(width: currentX, height: itemHeight)
     }
 }
