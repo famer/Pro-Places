@@ -56,8 +56,8 @@ class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate 
         let place2 = NamedPlace(name: "Yay", latitude: 51.088611, longitude: 14.421389) //NamedPlace(name: "Some yay", Lat: 12.12, Lon: 43.11)
         //navigation.places.addPlace(place2)
         
-        let place3 = NamedPlace(name: "Yay3", latitude: 52.088611, longitude: 14.421389) //NamedPlace(name: "Some yay", Lat: 12.12, Lon: 43.11)
-        
+        let place3 = NamedPlace(name: "Bicycle", latitude: 37.3376, longitude: -122.0369)
+            place3.image = UIImage(named: "cycle.png")!
         //place2.image = UIImage(named: "car.png")!
         //navigation.places.update([place2, place3])
         
@@ -69,7 +69,7 @@ class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate 
         let place = NamedPlace(name: "Goal", latitude: 48.149111, longitude: 11.560991)
         let berlin = NamedPlace(name: "Berlin", latitude: 52.518302, longitude: 13.418957)
         //navigation.places.update([place, berlin])
-                
+        // navigation.places.update([place3])
         createButtons(placeImageNames)
         
         mapViewManipulations.addAnnotations()
