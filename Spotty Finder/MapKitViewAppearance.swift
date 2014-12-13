@@ -48,20 +48,12 @@ class MapKitViewAppearance: NSObject, MKMapViewDelegate {
         if control == annotationView.rightCalloutAccessoryView {
             
             let placeToWorkWith = annotationView.annotation as NamedPlace
-            var sheet: UIActionSheet = UIActionSheet()
-            let title: String = annotationView.annotation.title!
-            sheet.title  = title
-            sheet.addButtonWithTitle("Cancel")
-            sheet.addButtonWithTitle("Send")
-            sheet.addButtonWithTitle("Delete")
-            sheet.addButtonWithTitle("Rename")
-            sheet.cancelButtonIndex = 0
+            
             
             placeActionSheetAppearance.setUIView(self.uiView!)
             placeActionSheetAppearance.setPlace(placeToWorkWith)
-            sheet.delegate = placeActionSheetAppearance
-            sheet.tag = 1
-            sheet.showInView(self.uiView!.view)
+            placeActionSheetAppearance.setSheet()
+            placeActionSheetAppearance.showSheet()
             
         } else if control == annotationView.leftCalloutAccessoryView {
             uiView?.placeImageSelectorView.hidden = !(uiView!.placeImageSelectorView.hidden)

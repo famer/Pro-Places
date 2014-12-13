@@ -16,6 +16,28 @@ class PlaceActionSheetAppearance: NSObject, UIActionSheetDelegate {
     
     var uiView: ViewController?
     var place: NamedPlace?
+    var sheet: UIActionSheet = UIActionSheet()
+    
+    func setSheet() -> UIActionSheet? {
+        if let setPlace = place {
+            sheet.title  = setPlace.title
+            sheet.addButtonWithTitle("Cancel")
+            sheet.addButtonWithTitle("Send")
+            sheet.addButtonWithTitle("Delete")
+            sheet.addButtonWithTitle("Rename")
+            sheet.cancelButtonIndex = 0
+            sheet.delegate = self
+            sheet.tag = 1
+            return sheet
+        } else {
+            println("You must set place to work with first")
+        }
+        return nil
+    }
+    
+    func showSheet() {
+        sheet.showInView(uiView!.view)
+    }
     
     
     func setUIView(uiview: ViewController) {
