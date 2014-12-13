@@ -11,7 +11,7 @@ import UIKit
 import Foundation
 
 
-class PlaceActionSheetAppearance: NSObject, UIActionSheetDelegate {
+class PlaceActionSheet: NSObject, UIActionSheetDelegate {
     override init() {}
     
     var uiView: ViewController?

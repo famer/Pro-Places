@@ -12,7 +12,7 @@ import MapKit
 class MapKitViewAppearance: NSObject, MKMapViewDelegate {
     
     var uiView: ViewController?
-    let placeActionSheetAppearance = PlaceActionSheetAppearance()
+    let placeActionSheet = PlaceActionSheet()
     
     override init() {}
     func setView(view: ViewController) {
@@ -50,10 +50,10 @@ class MapKitViewAppearance: NSObject, MKMapViewDelegate {
             let placeToWorkWith = annotationView.annotation as NamedPlace
             
             
-            placeActionSheetAppearance.setUIView(self.uiView!)
-            placeActionSheetAppearance.setPlace(placeToWorkWith)
-            placeActionSheetAppearance.setSheet()
-            placeActionSheetAppearance.showSheet()
+            placeActionSheet.setUIView(self.uiView!)
+            placeActionSheet.setPlace(placeToWorkWith)
+            placeActionSheet.setSheet()
+            placeActionSheet.showSheet()
             
         } else if control == annotationView.leftCalloutAccessoryView {
             uiView?.placeImageSelectorView.hidden = !(uiView!.placeImageSelectorView.hidden)
