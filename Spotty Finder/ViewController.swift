@@ -22,6 +22,7 @@ class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate 
     let navigation = Navigation.sharedInstance
     let mapKitViewAppearance = MapKitViewAppearance()
     var mapViewManipulations = MapViewManipulations()
+    let placeImportSheet = PlaceImportSheet()
     lazy var reader: QRCodeReader = QRCodeReader(cancelButtonTitle: "Cancel")
     
     let messageComposer = MessageComposer()
@@ -231,6 +232,13 @@ class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate 
             let errorAlert = UIAlertView(title: "Cannot Send Text Message", message: "Your device is not able to send text messages.", delegate: self, cancelButtonTitle: "OK")
             errorAlert.show()
         }
+    }
+    
+    @IBAction func importAction(sender: UIButton) {
+        placeImportSheet.setUIView(self)
+        placeImportSheet.setSheet()
+        placeImportSheet.showSheet()
+        
     }
     
     @IBAction func scanCode(sender: UIButton) {
