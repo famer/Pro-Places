@@ -71,13 +71,13 @@ class TableViewController: UITableViewController {
         //println(indexPath)
         if ( indexPath.section == 0 ) {
             let place = navigation.places.deleted[indexPath.row] as NamedPlace
-            cell.imageView.image = place.image
-            cell.imageView.layer.cornerRadius = 10.0
-            cell.imageView.clipsToBounds = true
-            cell.textLabel.text = place.title
+            cell.imageView!.image = place.image
+            cell.imageView!.layer.cornerRadius = 10.0
+            cell.imageView!.clipsToBounds = true
+            cell.textLabel!.text = place.title
             cell.detailTextLabel?.text = place.subtitle
         } else if ( indexPath.section == 1 ) {
-            cell.textLabel.text = providedSectionItems[indexPath.row]
+            cell.textLabel!.text = providedSectionItems[indexPath.row]
         }
 
         return cell

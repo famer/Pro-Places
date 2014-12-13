@@ -262,7 +262,7 @@ class ViewController: UIViewController, MKMapViewDelegate, QRCodeReaderDelegate 
     func appDidBecomeActive(notification:  NSNotification) {
     //override func viewWillAppear(animated: Bool) {
         if let url = self.openUrl {
-            var components = url.pathComponents
+            var components = url.pathComponents!
             let latitude = components[1].doubleValue
             let longitude = components[2].doubleValue
             let place = NamedPlace(name: "Receied place", latitude: latitude, longitude: longitude)
