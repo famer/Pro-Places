@@ -62,11 +62,12 @@
 		269BDD0719F67FC30004501F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269BDD0619F67FC30004501F /* CoreLocation.framework */; };
 		26ADFECC19FD659400B32B7F /* MapKitViewAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ADFECB19FD659400B32B7F /* MapKitViewAppearance.swift */; };
 		26ADFECE19FF2B0B00B32B7F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ADFECD19FF2B0B00B32B7F /* Network.swift */; };
-		26CCEE541A003CBC007FCDD2 /* PlaceActionSheetAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CCEE531A003CBC007FCDD2 /* PlaceActionSheetAppearance.swift */; };
+		26CCEE541A003CBC007FCDD2 /* PlaceActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CCEE531A003CBC007FCDD2 /* PlaceActionSheet.swift */; };
 		26D70F821A2C9B0C00E349B6 /* ProgrammaticallyCreatedUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D70F811A2C9B0C00E349B6 /* ProgrammaticallyCreatedUI.swift */; };
 		26D70F841A2D337700E349B6 /* ImageSelectorScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D70F831A2D337700E349B6 /* ImageSelectorScrollView.swift */; };
 		26E11AB41A24D55500CEB77C /* ImageChooserButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E11AB31A24D55500CEB77C /* ImageChooserButton.swift */; };
 		26E11ABA1A25026800CEB77C /* NamedPlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E11AB91A25026800CEB77C /* NamedPlaceAnnotationView.swift */; };
+		26E1F4E41A3BF6470094A645 /* PlaceImportSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1F4E31A3BF6470094A645 /* PlaceImportSheet.swift */; };
 		26EEA4581A2E423900815410 /* MessageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EEA4571A2E423900815410 /* MessageComposer.swift */; };
 /* End PBXBuildFile section */
 
@@ -142,11 +143,12 @@
 		269BDD0619F67FC30004501F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		26ADFECB19FD659400B32B7F /* MapKitViewAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitViewAppearance.swift; sourceTree = "<group>"; };
 		26ADFECD19FF2B0B00B32B7F /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		26CCEE531A003CBC007FCDD2 /* PlaceActionSheetAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceActionSheetAppearance.swift; sourceTree = "<group>"; };
+		26CCEE531A003CBC007FCDD2 /* PlaceActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceActionSheet.swift; sourceTree = "<group>"; };
 		26D70F811A2C9B0C00E349B6 /* ProgrammaticallyCreatedUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrammaticallyCreatedUI.swift; sourceTree = "<group>"; };
 		26D70F831A2D337700E349B6 /* ImageSelectorScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectorScrollView.swift; sourceTree = "<group>"; };
 		26E11AB31A24D55500CEB77C /* ImageChooserButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageChooserButton.swift; sourceTree = "<group>"; };
 		26E11AB91A25026800CEB77C /* NamedPlaceAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedPlaceAnnotationView.swift; sourceTree = "<group>"; };
+		26E1F4E31A3BF6470094A645 /* PlaceImportSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceImportSheet.swift; sourceTree = "<group>"; };
 		26EEA4571A2E423900815410 /* MessageComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,7 +187,8 @@
 			children = (
 				26ADFECB19FD659400B32B7F /* MapKitViewAppearance.swift */,
 				26E11AB91A25026800CEB77C /* NamedPlaceAnnotationView.swift */,
-				26CCEE531A003CBC007FCDD2 /* PlaceActionSheetAppearance.swift */,
+				26CCEE531A003CBC007FCDD2 /* PlaceActionSheet.swift */,
+				26E1F4E31A3BF6470094A645 /* PlaceImportSheet.swift */,
 				26E11AB31A24D55500CEB77C /* ImageChooserButton.swift */,
 				2657922B1A1AB06400239D9E /* TableViewController.swift */,
 				26D70F811A2C9B0C00E349B6 /* ProgrammaticallyCreatedUI.swift */,
@@ -498,10 +501,11 @@
 				2628DC8E1A301D3500436559 /* QRCodeReader.swift in Sources */,
 				2692336D1A1C5A0A0033527B /* MapViewManipulations.swift in Sources */,
 				2692336F1A1C5A7A0033527B /* Map.swift in Sources */,
+				26E1F4E41A3BF6470094A645 /* PlaceImportSheet.swift in Sources */,
 				2628DC8F1A301D3500436559 /* ReaderView.swift in Sources */,
 				269233771A1C9A430033527B /* SWRevealViewController.m in Sources */,
 				26E11AB41A24D55500CEB77C /* ImageChooserButton.swift in Sources */,
-				26CCEE541A003CBC007FCDD2 /* PlaceActionSheetAppearance.swift in Sources */,
+				26CCEE541A003CBC007FCDD2 /* PlaceActionSheet.swift in Sources */,
 				26D70F841A2D337700E349B6 /* ImageSelectorScrollView.swift in Sources */,
 				269BDCA919EE9C720004501F /* ViewController.swift in Sources */,
 				269BDCA719EE9C720004501F /* AppDelegate.swift in Sources */,
