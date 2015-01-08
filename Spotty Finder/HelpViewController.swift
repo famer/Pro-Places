@@ -22,4 +22,23 @@ class HelpViewController: UIViewController {
         
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        clearPDFBackground(self.webView)
+    }
+    
+    func clearPDFBackground(webView: UIWebView) {
+        var view :UIView?
+        view = webView as UIView
+        
+        while view? != nil {
+            if NSStringFromClass(view?.dynamicType) == "UIWebPDFView" {
+                view?.backgroundColor = UIColor.clearColor()
+            }
+            
+            view = view?.subviews.first as UIView?
+        }
+    }
+    
 }
