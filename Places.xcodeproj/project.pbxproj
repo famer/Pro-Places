@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2621BC501A5E375200B1BA19 /* documentation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2621BC4F1A5E375200B1BA19 /* documentation.pdf */; };
+		2621BC531A5E393F00B1BA19 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2621BC521A5E393F00B1BA19 /* HelpViewController.swift */; };
 		2628DC8E1A301D3500436559 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628DC8B1A301D3500436559 /* QRCodeReader.swift */; };
 		2628DC8F1A301D3500436559 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628DC8C1A301D3500436559 /* ReaderView.swift */; };
 		2628DC901A301D3500436559 /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628DC8D1A301D3500436559 /* SwitchCameraButton.swift */; };
@@ -84,6 +85,7 @@
 
 /* Begin PBXFileReference section */
 		2621BC4F1A5E375200B1BA19 /* documentation.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = documentation.pdf; sourceTree = "<group>"; };
+		2621BC521A5E393F00B1BA19 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		2628DC8B1A301D3500436559 /* QRCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReader.swift; sourceTree = "<group>"; };
 		2628DC8C1A301D3500436559 /* ReaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
 		2628DC8D1A301D3500436559 /* SwitchCameraButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCameraButton.swift; sourceTree = "<group>"; };
@@ -195,12 +197,12 @@
 		265792271A1AAE8B00239D9E /* UIClasses */ = {
 			isa = PBXGroup;
 			children = (
+				2657922B1A1AB06400239D9E /* TableViewController.swift */,
 				26ADFECB19FD659400B32B7F /* MapKitViewAppearance.swift */,
 				26E11AB91A25026800CEB77C /* NamedPlaceAnnotationView.swift */,
 				26CCEE531A003CBC007FCDD2 /* PlaceActionSheet.swift */,
 				26E1F4E31A3BF6470094A645 /* PlaceImportSheet.swift */,
 				26E11AB31A24D55500CEB77C /* ImageChooserButton.swift */,
-				2657922B1A1AB06400239D9E /* TableViewController.swift */,
 				26D70F811A2C9B0C00E349B6 /* ProgrammaticallyCreatedUI.swift */,
 				26D70F831A2D337700E349B6 /* ImageSelectorScrollView.swift */,
 			);
@@ -293,6 +295,7 @@
 				269BDCC619EE9D060004501F /* Classes */,
 				265792271A1AAE8B00239D9E /* UIClasses */,
 				269BDCA819EE9C720004501F /* ViewController.swift */,
+				2621BC521A5E393F00B1BA19 /* HelpViewController.swift */,
 				269BDCAA19EE9C720004501F /* Main.storyboard */,
 				269BDCAD19EE9C720004501F /* Images.xcassets */,
 				269BDCAF19EE9C720004501F /* LaunchScreen.xib */,
@@ -513,6 +516,7 @@
 				2628DC8E1A301D3500436559 /* QRCodeReader.swift in Sources */,
 				2692336D1A1C5A0A0033527B /* MapViewManipulations.swift in Sources */,
 				2692336F1A1C5A7A0033527B /* Map.swift in Sources */,
+				2621BC531A5E393F00B1BA19 /* HelpViewController.swift in Sources */,
 				26E1F4E41A3BF6470094A645 /* PlaceImportSheet.swift in Sources */,
 				2628DC8F1A301D3500436559 /* ReaderView.swift in Sources */,
 				269233771A1C9A430033527B /* SWRevealViewController.m in Sources */,

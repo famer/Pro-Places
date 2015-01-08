@@ -84,6 +84,11 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
+                                    <barButtonItem systemItem="search" id="5ym-SC-fGL">
+                                        <connections>
+                                            <segue destination="YoT-nw-ZxW" kind="presentation" id="tjZ-Px-uEw"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0q-BE-xy1">
@@ -158,6 +163,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="115" y="276"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="DdP-Ly-sz4">
+            <objects>
+                <viewController id="YoT-nw-ZxW" customClass="HelpViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xc8-GM-rh9"/>
+                        <viewControllerLayoutGuide type="bottom" id="SAW-82-ivq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z6y-pu-UOs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8s-h5-YYu">
+                                <rect key="frame" x="277" y="550" width="46" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2hq-kT-STh" kind="unwind" unwindAction="unwindToMain:" id="nbP-l7-9N8"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DQv-x0-zli">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="DQv-x0-zli" id="AVP-rg-nO4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hmk-TN-M3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2hq-kT-STh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="1039"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="syY-kF-RII">
