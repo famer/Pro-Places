@@ -176,8 +176,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8s-h5-YYu">
-                                <rect key="frame" x="277" y="550" width="46" height="30"/>
+                            <webView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQv-x0-zli">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="560"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8s-h5-YYu">
+                                <rect key="frame" x="282" y="562" width="37" height="30"/>
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -185,13 +190,16 @@
                                     <segue destination="2hq-kT-STh" kind="unwind" unwindAction="unwindToMain:" id="nbP-l7-9N8"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DQv-x0-zli">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
-                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="r8s-h5-YYu" secondAttribute="centerX" id="Ilm-7a-nCX"/>
+                            <constraint firstItem="r8s-h5-YYu" firstAttribute="top" secondItem="DQv-x0-zli" secondAttribute="bottom" constant="2" id="OfH-bA-yiY"/>
+                            <constraint firstItem="SAW-82-ivq" firstAttribute="top" secondItem="DQv-x0-zli" secondAttribute="bottom" constant="40" id="SPR-Vc-T4d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DQv-x0-zli" secondAttribute="trailing" constant="-16" id="Vvr-TI-KHo"/>
+                            <constraint firstItem="DQv-x0-zli" firstAttribute="top" secondItem="z6y-pu-UOs" secondAttribute="topMargin" id="hoQ-eF-FJd"/>
+                            <constraint firstItem="DQv-x0-zli" firstAttribute="leading" secondItem="z6y-pu-UOs" secondAttribute="leadingMargin" constant="-16" id="kMn-Xj-LZY"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="webView" destination="DQv-x0-zli" id="AVP-rg-nO4"/>
