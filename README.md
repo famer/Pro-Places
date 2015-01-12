@@ -19,3 +19,8 @@ Other links:
 * https://developer.apple.com/library/prerelease/ios/samplecode/Lister/Introduction/Intro.html
 * https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/ExtensibilityPG/
 * https://developer.apple.com/library/ios/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html
+
+## Полезные ресурсы ###
+* http://ivomynttinen.com/blog/the-ios-7-design-cheat-sheet/
+* http://appicontemplate.com
+* 
