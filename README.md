@@ -2,7 +2,7 @@
 
 * Documentation view on start
 * Button for documentation view
-* Добавить протоколы в классы-делегаты
+* Добавить протоколы в классы-делегаты (http://www.raywenderlich.com/75289/swift-tutorial-part-3-tuples-protocols-delegates-table-views)
 * Использовать протоколы вместо классов в определении делегатов для классов
 * Переделать document intro для более удобно просмотра(чтобы помещался на экран)
 * Перерисовать Watch Kit Интерфейс из Notability и Блокнота на большую бумагу
