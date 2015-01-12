@@ -21,6 +21,7 @@ Other links:
 * https://developer.apple.com/library/ios/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html
 
 ## Полезные ресурсы ###
-* http://ivomynttinen.com/blog/the-ios-7-design-cheat-sheet/
+* http://ivomynttinen.com/blog/the-ios-7-design-cheat-sheet/ New version: http://iosdesign.ivomynttinen.com
 * http://appicontemplate.com
-* 
+* http://appicontemplate.com/ios8
+* http://makeappicon.com/
