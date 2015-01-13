@@ -1,5 +1,6 @@
 # Todo #
 
+* Составить сроки по проекту
 * Documentation view on start
 * Button for documentation view
 * Undo После удаления метки
