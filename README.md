@@ -3,6 +3,7 @@
 * Documentation view on start
 * Button for documentation view
 * Undo После удаления метки
+* Проверить соответствию Nielsen's Heuristics
 * Добавить протоколы в классы-делегаты (http://www.raywenderlich.com/75289/swift-tutorial-part-3-tuples-protocols-delegates-table-views)
 * Использовать протоколы вместо классов в определении делегатов для классов
 * Переделать document intro для более удобно просмотра(чтобы помещался на экран)
