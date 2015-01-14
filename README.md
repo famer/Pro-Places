@@ -11,6 +11,7 @@
 * Перерисовать Watch Kit Интерфейс из Notability и Блокнота на большую бумагу
 * Поковырять Watch Kit Programming Guide https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html
 * Поковырять Watch Kit Human Interface Guidelines https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/index.html
+* Сделать нормальную иконку для iTunes
 
 
 Other links:
