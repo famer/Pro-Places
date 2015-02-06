@@ -1,5 +1,13 @@
-Project Pro Places Application. Be sure you are not violating LICENSE
+Pro Places source code
+======================
+
+Project source of [Pro Places Application](https://itunes.apple.com/us/app/pro-places/id948166579). Be sure you are not violating LICENSE
 
 [Pro Places ![Pro Places](https://raw.githubusercontent.com/famer/Pro-Places/public/Artwork/Icons/Icon_1024_3.png)](https://itunes.apple.com/us/app/pro-places/id948166579)
+
+License
+-------------------
+
+This project uses the FontAwesome fix made by Pit Garbe that you can find at https://github.com/leberwurstsaft/FontAwesome-for-iOS Version 2.0 of the Font Awesome font, CSS, and LESS files are licensed under CC BY 3.0: http://creativecommons.org/licenses/by/3.0/ A mention of 'Font Awesome - http://fortawesome.github.com/Font-Awesome' in human-readable source code is considered acceptable attribution (most common on the web). If human readable source code is not available to the end user, a mention in an 'About' or 'Credits' screen is considered acceptable (most common in desktop or mobile software)
 
 
