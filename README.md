@@ -8,7 +8,7 @@ Project source of [Pro Places Application](https://itunes.apple.com/us/app/pro-p
 License
 -------------------
 
-Content of this license is a subject of change.
+Content of this license is a subject to change.
 
 This source is a codebase of [Pro Places iOS Application](https://itunes.apple.com/us/app/pro-places/id948166579) further denoted as Software.
 
@@ -29,5 +29,5 @@ Pro Places Source code is allowed for following means.
 3. You are able to reuse parts of the sources of this project limited by 100 lines in your own projects and products including commercial ones
 4. Source code of the third party libraries used in this project are provided under original licenses of their.
 
-Content of this license is a subject of change. User of the source is responsible of checking of updates of this license when he/she uses sources of this project.
+Content of this license is a subject to change. User of the source is responsible of checking of updates of this license when he/she uses sources of this project.
 
