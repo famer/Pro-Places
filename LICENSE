@@ -1,3 +1,6 @@
+Copyright (c) 2015, Timur Tatarshaov
+All rights reserved.
+
 Pro Places Source License
 
 Content of this license is a subject to change.
@@ -19,11 +22,29 @@ Pro Places Source code is allowed for following means.
 1. You are able to use copy full project source and use it for personal purposes
 2. You are able to use copy full project source and use it for educational purposes
 3. You are able to reuse parts of the sources of this project limited by 100 lines in your own projects and products including commercial ones
-4. Source code of the third party libraries used in this project are provided under original licenses of their.
+4. Source code of the third party libraries used in this project are provided under original licenses of them.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, 
+  lists of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice, 
+  lists of conditions and the following disclaimer in the documentation and/or
+  other materials provided with the distribution.
 
 Content of this license is a subject to change. User of the source is responsible of checking of updates of this license when he/she uses sources of this project.
 
-So basically don’t copy it completely.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-27.01.2015 Timur Tatarshaov
  
