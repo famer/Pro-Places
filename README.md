@@ -1,4 +1,4 @@
-### Requires [Xcode 6.x](http://adcdownload.apple.com/Developer_Tools/xcode_6.1.1/xcode_6.1.1.dmg) version due to proper swift version support  
+### Requires [Xcode 6.x version](https://developer.apple.com/devcenter/download.action?path=/Developer_Tools/xcode_6.1.1/xcode_6.1.1.dmg) due to proper swift version support  
 
 Pro Places source code
 ======================
