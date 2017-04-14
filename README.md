@@ -1,3 +1,5 @@
+### Requires [Xcode 6.x](http://adcdownload.apple.com/Developer_Tools/xcode_6.1.1/xcode_6.1.1.dmg) version due to proper swift version support  
+
 Pro Places source code
 ======================
 
